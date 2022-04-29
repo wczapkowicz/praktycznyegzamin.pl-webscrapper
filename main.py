@@ -42,8 +42,8 @@ def main():
         if len(obj.find_elements(by=By.TAG_NAME, value='img')) > 0:
             image = obj.find_element(by=By.TAG_NAME, value='img').get_attribute('src')
             print(f'===> Saving image for question no. {id}')
-            urllib.request.urlretrieve(image, f'images/inf03/{id}.png')
-            img_url = f'images/inf03/{id}.png'
+            urllib.request.urlretrieve(image, f'images/{image_folder_name}/{id}.png')
+            img_url = f'images/{image_folder_name}/{id}.png'
         else:
             img_url = None
 
